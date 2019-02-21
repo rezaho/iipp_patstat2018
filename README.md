@@ -1,49 +1,26 @@
-[CEI]:https://www.college-de-france.fr/site/centre-economie-innovation/index.htm
-[GHissues]:https://github.com/cverluise/openPatstat/issues
-[GHpulls]:https://github.com/cverluise/openPatstat/pulls
-[GHOP]:https://github.com/cverluise/openPatstat
-[GBOP]:https://economics-of-innovation-lab.gitbook.io/open-patstat/
-[GBlogo]:https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi269Gt8vHeAhWMz4UKHRrXAEkQjRx6BAgBEAU&url=https%3A%2F%2Ftwitter.com%2Fgitbookio&psig=AOvVaw3qrY-UcmDrgPTuMh6jGY0b&ust=1543316020829708
-[db-logo]: https://aem.dropbox.com/cms/content/dam/dropbox/www/en-us/branding/app-dropbox-windows@2x.png.transform/half-res/img.png
-[db]:https://www.dropbox.com/sh/b1gs90gtoduu02v/AABICBNYH2kysjX-4JTqee0Wa?dl=0
-
-# Statement
-
-The purpose of this project is to help disseminate Statistical Data on Patents (so called PatStat) 
-to stimulate research on Patents and Innovation. To do so, we provide tools to load, build and explore 
-this data using Google Cloud Platform. Google Cloud Platform offers a simple, yet powerful Big Data 
-environment. 
-
-This is an open source project hosted by the [Economics of Innovation ​Research Lab][CEI] at the Collège de France.
-This is also meant to provide a place for sharing codes and good practices. Please, send [pull requests][GHpulls] and 
-[issues][GHissues] directly to the [dedicated GitHub repository][GHOP]. 
-
-> <font color='orange'>Version 0.1: This is a development release. Some features might be changed in backward-incompatible ways.</font>
-
-# Documentation
-
-[![alt text](https://gitlab.com/uploads/-/system/project/avatar/1058960/gitbook.png "Logo GitBook")][GBOP]
-
-Please, visit our [GitBook][GBOP] for full documentation, examples and resources.   
-
-## Views and Plots
+[iipp]:https://iipp.epfl.ch/
+[loading_tables]:https://github.com/rezaho/iipp_patstat2018/blob/master/BigQuery_Script.ipynb
+[changing_compression]:https://github.com/rezaho/iipp_patstat2018/blob/master/Changing_compression.ipynb
+[google_sdk]:https://cloud.google.com/sdk/install
 
 
-Readers interested in the views and plots generated in the course of the Exploratory Data Analysis (`EDA/*.ipynb`) can access them on our dedicated dropbox. 
+# Overview
 
+This repository contains codes under a project hosted by the [][] at CDM EPFL, which are necessary for loading, visualizing, and analyzing PatStat dataset. The codes will be updated gradually.
 
-[![alt text][db-logo]][db]
+- For loading the data into Big Query tables please refer to this [notebook: Loading BQ Tables][loading_tables]
+- For Changing the compression type of Patstat files to gzip, please refer to this [notebook: Changing Compression][changing_compression]
 
 
 # Installation 
 
-## Clone/ Download the openPatstat repository
+## Clone/ Download this repository
 
 ### Git
 
 ```bash
 cd destination/path
-git clone https://github.com/cverluise/openPatstat.git
+git clone https://github.com/rezaho/iipp_patstat2018
 ````
 
 ### Download
@@ -52,10 +29,11 @@ git clone https://github.com/cverluise/openPatstat.git
 2. Click `Clone` or Download (top right)
 3. Click `Download ZIP`
 
-## Install the open_pastat python module
-
+## Installing google big query library
+Installing Big Query library is necessary for doing the introduced operations.
 ```bash
-cd path/to/open_patstat
-pip install -r requirements.txt
-pip install -e .
-```
+pip install --upgrade google-cloud-bigquery
+````
+# Google SDK
+In case you have decided to use GCP bucket to upload your data and load them to Big Query, you need to install Google SDK for using `gsutil` module. Please, follow the instruction on [Google SDK][google_sdk].
+
