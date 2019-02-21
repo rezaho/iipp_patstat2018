@@ -7,10 +7,10 @@
 
 # Overview
 
-This repository contains codes under a project hosted by the [Chair of Innovation and IP Policy][iipp] at CDM EPFL, which are necessary for loading, visualizing, and analyzing PatStat dataset. The codes will be updated gradually.
+This repository contains codes, which are necessary for loading, visualizing, and analyzing PatStat dataset. The codes will be added gradually. This is a project hosted by the [Chair of Innovation and IP Policy][iipp] at Colledge of Management, EPFL.
 
-- For loading the data into Big Query tables please refer to this [notebook: Loading BQ Tables][loading_tables] or [the python script][loading_tables_script]
-- For Changing the compression type of Patstat files to gzip, please refer to this [notebook: Changing Compression][changing_compression]
+- For loading the data into Big Query tables, please refer to this [notebook: Loading BQ Tables][loading_tables] or [the python script][loading_tables_script]
+- For changing the compression type of Patstat files to gzip, please refer to this [notebook: Changing Compression][changing_compression]
 
 
 # Installation 
